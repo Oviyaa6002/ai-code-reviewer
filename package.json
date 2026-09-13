@@ -1,0 +1,28 @@
+{
+  "name": "ai-code-reviewer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered code review tool that detects bugs, security issues, and suggests improvements using the Claude API. Available as a CLI and a web dashboard.",
+  "workspaces": [
+    "core",
+    "backend",
+    "cli",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:all": "concurrently -k -n API,WEB -c blue,magenta \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
+    "start": "npm run start --workspace=backend",
+    "build:frontend": "npm run build --workspace=frontend",
+    "review": "node cli/bin/cli.js",
+    "setup": "npm install && cp -n backend/.env.example backend/.env || true"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}

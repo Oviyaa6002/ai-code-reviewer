@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  color: #1B1F23;
+}
+
+::selection {
+  background: #1F6F63;
+  color: #FAF9F6;
+}
+
+/* Visible keyboard focus everywhere, styled instead of the browser default */
+:focus-visible {
+  outline: 2px solid #1F6F63;
+  outline-offset: 2px;
+}
+
+.cm-editor {
+  height: 100%;
+  font-size: 13.5px;
+}
