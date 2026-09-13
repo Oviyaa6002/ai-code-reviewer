@@ -5,7 +5,10 @@ A code review tool that reads a file or snippet and returns a structured report 
 > Built as a portfolio project to demonstrate API integration, prompt engineering for structured output, and full-stack architecture (monorepo, shared core logic, REST API, React frontend, CLI tooling).
 
 ---
+   ## Demo
 
+   ![AI Code Reviewer demo](./docs/demo.png)
+   
 ## Why this exists
 
 Automated linters catch syntax and style issues; they don't catch "this SQL query is built with string concatenation" or "this function will throw if `users` is empty." This tool uses an LLM to do the kind of review a careful senior engineer would do on a pull request — while staying structured enough to gate a CI pipeline or render in a UI, not just produce a paragraph of prose.
